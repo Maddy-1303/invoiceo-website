@@ -19,5 +19,5 @@ window.INVOICEO = {
   analyticsId: 'G-9KTHWETYYB',
 
   // Installer sizes shown on the Download page, e.g. '28 MB'. Empty = not shown.
-  sizes: { windows: '19.7 MB', mac: '35.4 MB', linuxDeb: '24.7 MB', linuxAppImage: '30.3 MB' }
+  sizes: { windows: '19.5 MB', mac: '34.1 MB', linuxDeb: '24.7 MB', linuxAppImage: '29.7 MB' }
 };
