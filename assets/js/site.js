@@ -123,6 +123,11 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
-    window.gtag('config', C.analyticsId, { anonymize_ip: true });
+    // Visit counts only: no Google signals or ad personalisation.
+    window.gtag('config', C.analyticsId, {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
   }
 })();

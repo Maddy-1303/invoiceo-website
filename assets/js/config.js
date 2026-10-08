@@ -16,7 +16,7 @@ window.INVOICEO = {
   },
 
   // Google Analytics measurement ID, e.g. 'G-XXXXXXXXXX'. Empty = no tracking.
-  analyticsId: '',
+  analyticsId: 'G-9KTHWETYYB',
 
   // Installer sizes shown on the Download page, e.g. '28 MB'. Empty = not shown.
   sizes: { windows: '19.7 MB', mac: '35.4 MB', linuxDeb: '24.7 MB', linuxAppImage: '30.3 MB' }
