@@ -20,80 +20,53 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/css/site.css?v=1.0.1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/site.css?v=ea26da1f02">
 </head>
 <body>
-
 <header class="site-header">
-  <div class="container">
+  <div class="wrap">
     <a class="brand" href="index.html" aria-label="Invoiceo home"><img src="assets/images/logo.png" alt="Invoiceo" width="196" height="68"></a>
-    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="index.html#features">Features</a>
-        <a href="download.html">Download</a>
-        <a href="customization.html">Customization</a>
-        <a href="faq.html">FAQ</a>
-        <a href="changelog.html">Updates</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-primary btn-sm header-cta" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download free</a>
-    </nav>
+    <nav class="nav" aria-label="Main"><a href="index.html#features">Features</a><a href="index.html#how-it-works">How it works</a><a href="index.html#screenshots">Screenshots</a><a href="faq.html">FAQ</a></nav>
+    <div class="header-actions">
+      <a class="btn btn-primary header-cta" href="download.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download free</span></a>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+    <nav class="mobile-nav" id="site-nav" aria-label="Main menu"><a href="index.html#features">Features</a><a href="index.html#how-it-works">How it works</a><a href="index.html#screenshots">Screenshots</a><a href="faq.html">FAQ</a><a href="changelog.html">What’s new</a><a href="contact.html">Contact</a><a class="btn btn-primary btn-lg btn-block" href="download.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download free</span></a></nav>
   </div>
 </header>
 <main id="main">
-<section class="section">
-  <div class="container center">
-    <div class="err-code">404</div>
-    <h1 class="mt-2">This page could not be found</h1>
-    <p class="lead">The link may be old, or the page may have moved.</p>
-    <div class="hero-actions" style="justify-content:center">
-      <a class="btn btn-primary" href="index.html">Go to the home page</a>
-      <a class="btn btn-secondary" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download Invoiceo</a>
-    </div>
+<section class="wrap not-found">
+  <div class="err-code" aria-hidden="true">404</div>
+  <h1 class="h2">This page could not be found</h1>
+  <p class="lead">The link may be old, or the page may have moved.</p>
+  <div class="cta-row" style="justify-content: center">
+    <a class="btn btn-primary btn-lg" href="index.html"><span>Go to the home page</span></a>
+    <a class="btn btn-secondary btn-lg" href="download.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download Invoiceo</span></a>
   </div>
 </section>
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="Invoiceo" width="196" height="68">
-        <p>Free billing and GST invoice software that runs on your own computer.</p>
-        <a class="coffee" href="https://buymeacoffee.com/madcreations" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Buy me a coffee</a>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <img src="assets/images/logo.png" alt="Invoiceo" width="196" height="68" loading="lazy">
+        <p>Free, open-source billing software for Windows, macOS and Linux.</p>
+        <a class="coffee" href="https://buymeacoffee.com/madcreations" target="_blank" rel="noopener"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Buy me a coffee</a>
       </div>
-      <div>
-        <h4>Product</h4>
-        <ul>
-          <li><a href="download.html">Download</a></li>
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="changelog.html">Updates</a></li>
-          <li><a href="customization.html">Customization</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li data-block><a data-href="forms.support" data-hide-empty target="_blank" rel="noopener">Support request</a></li>
-          <li data-block><a data-href="forms.feedback" data-hide-empty target="_blank" rel="noopener">Send feedback</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="terms.html">Terms</a></li>
-          <li><a href="licenses.html">Licenses</a></li>
-        </ul>
-      </div>
+      <div><h2>Product</h2><ul><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How it works</a></li><li><a href="index.html#screenshots">Screenshots</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">What’s new</a></li></ul></div>
+      <div><h2>Help</h2><ul><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li data-block><a data-href="forms.support" data-hide-empty target="_blank" rel="noopener">Support request</a></li><li data-block><a data-whatsapp target="_blank" rel="noopener">WhatsApp</a></li><li data-block><a data-href="forms.feedback" data-hide-empty target="_blank" rel="noopener">Feedback</a></li><li><a href="customization.html">Custom features (paid)</a></li></ul></div>
+      <div><h2>Legal</h2><ul><li><a href="licenses.html">Licenses</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
+    <div class="foot-bottom">
       <span>© <span data-year>2026</span> Madcreations. Built on Invoiso, released under the <a href="licenses.html">MIT License</a>, © 2025 ANOOP P.</span>
-      <span><a href="mailto:madhanprasat2002r@gmail.com">madhanprasat2002r@gmail.com</a></span>
+      <a href="mailto:madhanprasat2002r@gmail.com">madhanprasat2002r@gmail.com</a>
     </div>
   </div>
 </footer>
-<script src="assets/js/config.js?v=1.0.1"></script>
-<script src="assets/js/site.js?v=1.0.1"></script>
+<script src="assets/js/config.js?v=c1dc1d0e89"></script>
+<script src="assets/js/site.js?v=c3c3a244ef"></script>
 </body>
 </html>

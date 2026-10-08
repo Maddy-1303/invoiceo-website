@@ -19,147 +19,80 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/css/site.css?v=1.0.1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/site.css?v=ea26da1f02">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
-  <div class="container">
+  <div class="wrap">
     <a class="brand" href="index.html" aria-label="Invoiceo home"><img src="assets/images/logo.png" alt="Invoiceo" width="196" height="68"></a>
-    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="index.html#features">Features</a>
-        <a href="download.html" aria-current="page">Download</a>
-        <a href="customization.html">Customization</a>
-        <a href="faq.html">FAQ</a>
-        <a href="changelog.html">Updates</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-primary btn-sm header-cta" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download free</a>
-    </nav>
+    <nav class="nav" aria-label="Main"><a href="index.html#features">Features</a><a href="index.html#how-it-works">How it works</a><a href="index.html#screenshots">Screenshots</a><a href="faq.html">FAQ</a></nav>
+    <div class="header-actions">
+      <a class="btn btn-primary header-cta" href="download.html" aria-current="page"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download free</span></a>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+    <nav class="mobile-nav" id="site-nav" aria-label="Main menu"><a href="index.html#features">Features</a><a href="index.html#how-it-works">How it works</a><a href="index.html#screenshots">Screenshots</a><a href="faq.html">FAQ</a><a href="changelog.html">What’s new</a><a href="contact.html">Contact</a><a class="btn btn-primary btn-lg btn-block" href="download.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download free</span></a></nav>
   </div>
 </header>
 <main id="main">
 <section class="page-head">
-  <div class="container">
-    <span class="badge badge-free"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg> Free</span>
+  <div class="wrap">
+    <p class="eyebrow">Download</p>
     <h1>Download Invoiceo</h1>
-    <p>Free for Windows, macOS and Linux. No sign-up, no licence key and no subscription.</p>
-    <div class="version-row">
-      <span class="badge badge-brand">Version <span data-version>1.0.1</span></span>
-      <span class="badge badge-neutral">Released <span data-release-date>9 October 2026</span></span>
-      <a href="changelog.html" class="small">What’s new</a>
-    </div>
+    <p class="lead">Free for Windows, macOS and Linux. No sign-up, no licence key and no subscription.</p>
+    <div class="badges"><span class="badge badge-brand"><span>Version <span data-version>1.0.1</span></span></span><span class="badge badge-neutral"><span>Released <span data-release-date>9 October 2026</span></span></span></div>
+    <p class="small"><a href="changelog.html">What’s new in this version</a></p>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="notice hidden mt-2" data-mobile-note><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Invoiceo runs on a Windows, Mac or Linux computer. Open <b>invoiceo.in</b> on your computer to download it.</div>
-    <div class="recommended" data-recommended>
-      <div>
-        <h2>Recommended for your computer: <span data-recommended-name>Windows</span></h2>
-        <p class="muted">We picked this from your browser. All versions are listed below.</p>
-      </div>
-      <a class="btn btn-primary" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-Setup-Windows.exe" data-os-download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> <span data-os-label>Download</span></a>
-    </div>
+<section class="page-body" aria-label="Installers">
+  <div class="wrap">
+    <div class="dl-trust"><span class="badge badge-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Free forever</span></span><span class="badge badge-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>No credit card</span></span><span class="badge badge-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>No subscription</span></span><span class="badge badge-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Open source</span></span></div>
+    <div class="mt-2"><div class="notice hidden" data-mobile-note><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg><span>You’re on a phone. Invoiceo runs on Windows, macOS and Linux computers. Open <b>invoiceo.in</b> on your computer to download it.</span></div></div>
+    <div class="mt-3"><div class="dl-grid"><div class="dl-card is-recommended" data-platform="windows" data-req-short="Windows 10 and 11" id="windows"><div class="dl-card-top"><span class="tile tile-neutral"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 5.6 10.4 4.6v7.1H3zM11.4 4.4 21 3v8.7h-9.6zM3 12.6h7.4v7.1L3 18.6zM11.4 12.6H21V21l-9.6-1.4z"/></svg></span><span class="badge badge-brand rec-badge"><span>Recommended for you</span></span></div><div><h3>Windows</h3><p class="dl-req">Windows 10 and 11 · 64-bit</p></div><div class="dl-buttons"><a class="btn btn-secondary btn-lg btn-block dl-main" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-Setup-Windows.exe" data-primary-download><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download for Windows</span></a></div><p class="dl-file">Invoiceo-Setup-Windows.exe<span data-size="windows"></span></p><div class="dl-note"><ol><li>Open the downloaded file.</li><li>If Windows shows <b>“Windows protected your PC”</b>, click <b>More info</b>, then <b>Run anyway</b>. This appears because the installer is not code-signed yet.</li><li>Follow the setup. Invoiceo then opens from the Start menu.</li></ol></div></div><div class="dl-card" data-platform="mac" data-req-short="macOS 12 or later" id="macos"><div class="dl-card-top"><span class="tile tile-neutral"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span><span class="badge badge-brand rec-badge"><span>Recommended for you</span></span></div><div><h3>macOS</h3><p class="dl-req">macOS 12 Monterey or later</p></div><div class="dl-buttons"><a class="btn btn-secondary btn-lg btn-block dl-main" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-macOS.dmg" data-primary-download><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download for macOS</span></a></div><p class="dl-file">Invoiceo-macOS.dmg<span data-size="mac"></span></p><div class="dl-note"><ol><li>Open the .dmg and drag Invoiceo into Applications.</li><li>Open Invoiceo. If macOS says it cannot verify the app, click <b>Done</b>. This happens because the app is not notarised by Apple yet.</li><li>Open <b>System Settings → Privacy &amp; Security</b>, scroll down to the message about Invoiceo and click <b>Open Anyway</b>, then confirm. (On macOS 14 or older you can instead Control-click Invoiceo in Applications and choose <b>Open</b>.)</li><li>After that it opens normally.</li></ol></div></div><div class="dl-card" data-platform="linux" data-req-short="Ubuntu, Debian, Mint and more" id="linux"><div class="dl-card-top"><span class="tile tile-neutral"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 00-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 00-.205.334 1.18 1.18 0 00-.09.4v.019c.002.089.008.179.02.267-.193-.067-.438-.135-.607-.202a1.635 1.635 0 01-.018-.2v-.02a1.772 1.772 0 01.15-.768c.082-.22.232-.406.43-.533a.985.985 0 01.594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2.012-.09.013-.18.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.613.613 0 00-.166-.267.248.248 0 00-.183-.064h-.021c-.071.006-.13.04-.186.132a.552.552 0 00-.12.27.944.944 0 00-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268.01.009.02.018.034.024-.07.057-.117.07-.176.136a.304.304 0 01-.131.068 2.62 2.62 0 01-.275-.402 1.772 1.772 0 01-.155-.667 1.759 1.759 0 01.08-.668 1.43 1.43 0 01.283-.535c.128-.133.26-.2.418-.2zm1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.571.571 0 01.016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.139 1.139 0 01-.448-.067 3.566 3.566 0 01-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71-.07-.268-.005-.47.193-.6.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.645 2.645 0 00-.402-.533 1.45 1.45 0 00-.275-.333c.182 0 .338-.03.465-.067a.615.615 0 00.314-.334c.108-.267 0-.697-.345-1.163-.345-.467-.931-.995-1.788-1.521-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.123 8.123 0 01.647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335.039.003.075.006.11.006.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01c.053 0 .105.005.157.014.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602-.369-.066-.61-.2-.723-.4-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336zm7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8.097 8.097 0 01-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065zm-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></svg></span><span class="badge badge-brand rec-badge"><span>Recommended for you</span></span></div><div><h3>Linux</h3><p class="dl-req">Ubuntu 22.04+, Debian 12+, Mint 21+ and others</p></div><div class="dl-buttons"><a class="btn btn-secondary btn-lg btn-block dl-main" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-Linux.deb" data-primary-download><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download .deb</span></a><a class="btn btn-ghost btn-block" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-Linux.AppImage"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download AppImage</span></a></div><p class="dl-file">Invoiceo-Linux.deb<span data-size="linuxDeb"></span><br>Invoiceo-Linux.AppImage<span data-size="linuxAppImage"></span></p><div class="dl-note"><ol><li><b>.deb</b> (Ubuntu 22.04+, Debian 12+, Linux Mint 21+): run <code>sudo apt install ./Invoiceo-Linux.deb</code> in the folder you downloaded it to.</li><li><b>AppImage</b> (other distributions): run <code>chmod +x Invoiceo-Linux.AppImage</code>, then open the file.</li></ol></div></div></div></div>
+    <div class="mt-2"><p class="center small muted">Check your download with the <a href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/SHA256SUMS.txt">SHA-256 checksums</a></p></div>
+  </div>
+</section>
 
-    <div class="grid grid-3 mt-3">
-      <div class="card platform" data-platform="windows" id="windows">
-        <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
-        <h3>Windows</h3>
-        <p class="meta">Windows 10 or 11, 64-bit · .exe installer<span data-size="windows"></span></p>
-        <a class="btn btn-primary" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-Setup-Windows.exe" data-primary-download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download for Windows</a>
-        <ol>
-          <li>Open the downloaded file.</li>
-          <li>If Windows shows <b>“Windows protected your PC”</b>, click <b>More info</b>, then <b>Run anyway</b>. This appears because the installer is not code-signed yet.</li>
-          <li>Follow the setup. Invoiceo then opens from the Start menu.</li>
-        </ol>
-      </div>
-      <div class="card platform" data-platform="mac" id="macos">
-        <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
-        <h3>macOS</h3>
-        <p class="meta">macOS 12 Monterey or later · .dmg disk image<span data-size="mac"></span></p>
-        <a class="btn btn-primary" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-macOS.dmg" data-primary-download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download for macOS</a>
-        <ol>
-          <li>Open the .dmg and drag Invoiceo into Applications.</li>
-          <li>Open Invoiceo. If macOS says it cannot verify the app, click <b>Done</b>. This happens because the app is not notarised by Apple yet.</li>
-          <li>Open <b>System Settings → Privacy &amp; Security</b>, scroll down to the message about Invoiceo and click <b>Open Anyway</b>, then confirm. (On macOS 14 or older you can instead Control-click Invoiceo in Applications and choose <b>Open</b>.)</li>
-          <li>After that it opens normally.</li>
-        </ol>
-      </div>
-      <div class="card platform" data-platform="linux" id="linux">
-        <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></span>
-        <h3>Linux</h3>
-        <p class="meta">.deb for Ubuntu 22.04+, Debian 12+ and Linux Mint 21+ · AppImage for other distributions</p>
-        <a class="btn btn-primary" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-Linux.deb" data-primary-download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download .deb<span data-size="linuxDeb"></span></a>
-        <a class="btn btn-secondary" href="https://github.com/Maddy-1303/invoiceo/releases/latest/download/Invoiceo-Linux.AppImage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download AppImage<span data-size="linuxAppImage"></span></a>
-        <ol>
-          <li><b>.deb:</b> run <code>sudo apt install ./Invoiceo-Linux.deb</code> in the folder you downloaded it to.</li>
-          <li><b>AppImage:</b> run <code>chmod +x Invoiceo-Linux.AppImage</code>, then open the file.</li>
-        </ol>
-      </div>
-    </div>
+<section class="section section-subtle" aria-labelledby="first-steps">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">After installing</p><h2 id="first-steps">Up and running in minutes</h2></div>
+    <div class="mt-4"><ol class="steps-row"><li><span class="step-label"><span class="tile tile-sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>Step 1</span><h3 class="h4">Download</h3><p>Pick your computer above.</p></li><li><span class="step-label"><span class="tile tile-sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span>Step 2</span><h3 class="h4">Install</h3><p>Open the file and follow the steps.</p></li><li><span class="step-label"><span class="tile tile-sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>Step 3</span><h3 class="h4">Sign in and set up</h3><p>The first screen shows how to sign in. Then add your business details.</p></li><li><span class="step-label"><span class="tile tile-sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>Step 4</span><h3 class="h4">First invoice</h3><p>Add a customer and items, then create the invoice.</p></li><li><span class="step-label"><span class="tile tile-sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span>Step 5</span><h3 class="h4">Print or PDF</h3><p>Print on A4 or a thermal printer, or save a PDF.</p></li></ol></div>
+  </div>
+</section>
 
-    <div class="notice free mt-3"><b>Invoiceo is free.</b> You never need to pay to download it, install it on more computers or keep using it.</div>
-
-    <div class="grid grid-2 mt-3">
-      <div class="card">
-        <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></span>
-        <h3>Updating to a new version</h3>
-        <p>Download the new installer and install it over the old version. Your data is kept, but we recommend making a backup first from <b>Settings → Backup</b> in the app.</p>
-      </div>
-      <div class="card">
-        <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
-        <h3>Need help installing?</h3>
-        <p>Read the <a href="faq.html">FAQ</a> or <a href="contact.html">contact us</a>, and we will help you get started.</p>
-      </div>
+<section class="section section-flush" aria-label="More help">
+  <div class="wrap">
+    <div class="grid-auto">
+      <div class="card"><span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></span><h2 class="h4">Updating to a new version</h2><p>Download the new installer and install it over the old version. Your data is kept, but make a backup first from <b>Settings → Backup</b> in the app.</p></div>
+      <div class="card"><span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><h2 class="h4">Need help installing?</h2><p>Read the <a href="faq.html">FAQ</a> or <a href="contact.html">contact us</a>, and we will help you get started.</p></div>
+      <div class="card"><span class="tile tile-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></span><h2 class="h4">Free, on every computer</h2><p>You never need to pay to download Invoiceo, install it on more computers or keep using it.</p></div>
     </div>
   </div>
 </section>
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="Invoiceo" width="196" height="68">
-        <p>Free billing and GST invoice software that runs on your own computer.</p>
-        <a class="coffee" href="https://buymeacoffee.com/madcreations" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Buy me a coffee</a>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <img src="assets/images/logo.png" alt="Invoiceo" width="196" height="68" loading="lazy">
+        <p>Free, open-source billing software for Windows, macOS and Linux.</p>
+        <a class="coffee" href="https://buymeacoffee.com/madcreations" target="_blank" rel="noopener"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Buy me a coffee</a>
       </div>
-      <div>
-        <h4>Product</h4>
-        <ul>
-          <li><a href="download.html">Download</a></li>
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="changelog.html">Updates</a></li>
-          <li><a href="customization.html">Customization</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li data-block><a data-href="forms.support" data-hide-empty target="_blank" rel="noopener">Support request</a></li>
-          <li data-block><a data-href="forms.feedback" data-hide-empty target="_blank" rel="noopener">Send feedback</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="terms.html">Terms</a></li>
-          <li><a href="licenses.html">Licenses</a></li>
-        </ul>
-      </div>
+      <div><h2>Product</h2><ul><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How it works</a></li><li><a href="index.html#screenshots">Screenshots</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">What’s new</a></li></ul></div>
+      <div><h2>Help</h2><ul><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li data-block><a data-href="forms.support" data-hide-empty target="_blank" rel="noopener">Support request</a></li><li data-block><a data-whatsapp target="_blank" rel="noopener">WhatsApp</a></li><li data-block><a data-href="forms.feedback" data-hide-empty target="_blank" rel="noopener">Feedback</a></li><li><a href="customization.html">Custom features (paid)</a></li></ul></div>
+      <div><h2>Legal</h2><ul><li><a href="licenses.html">Licenses</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
+    <div class="foot-bottom">
       <span>© <span data-year>2026</span> Madcreations. Built on Invoiso, released under the <a href="licenses.html">MIT License</a>, © 2025 ANOOP P.</span>
-      <span><a href="mailto:madhanprasat2002r@gmail.com">madhanprasat2002r@gmail.com</a></span>
+      <a href="mailto:madhanprasat2002r@gmail.com">madhanprasat2002r@gmail.com</a>
     </div>
   </div>
 </footer>
-<script src="assets/js/config.js?v=1.0.1"></script>
-<script src="assets/js/site.js?v=1.0.1"></script>
+<script src="assets/js/config.js?v=c1dc1d0e89"></script>
+<script src="assets/js/site.js?v=c3c3a244ef"></script>
 </body>
 </html>
