@@ -130,4 +130,53 @@
       allow_ad_personalization_signals: false
     });
   }
+
+  // Download tracking (only sends anything when analytics is on).
+  //   download_click       a click on an installer link (GitHub release file)
+  //   download_page_click  a click on a link that leads to the Download page
+  function placement(a) {
+    if (a.closest('.site-header')) return 'header';
+    if (a.closest('.site-footer')) return 'footer';
+    if (a.closest('[data-recommended]')) return 'recommended_box';
+    if (a.closest('[data-platform]')) return 'platform_card';
+    if (a.closest('.hero')) return 'hero';
+    if (a.closest('.cta-band')) return 'cta_band';
+    var section = a.closest('section[id]');
+    return section ? section.id : 'page_body';
+  }
+  function installer(href) {
+    var m = /\/releases\/(?:latest\/)?download\/(?:[^/]+\/)?([^/?#]+)$/.exec(href);
+    if (!m) return null;
+    var file = m[1];
+    var platform = /windows|\.exe$/i.test(file) ? 'windows'
+      : /macos|\.dmg$/i.test(file) ? 'mac'
+      : /\.deb$/i.test(file) ? 'linux_deb'
+      : /\.appimage$/i.test(file) ? 'linux_appimage' : 'other';
+    return { file: file, platform: platform };
+  }
+  document.addEventListener('click', function (e) {
+    if (typeof window.gtag !== 'function') return;
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.href;
+    var file = installer(href);
+    if (file) {
+      window.gtag('event', 'download_click', {
+        platform: file.platform,
+        file_name: file.file,
+        placement: placement(a),
+        detected_os: os,
+        page_path: location.pathname,
+        transport_type: 'beacon'
+      });
+    } else if (/\/download\.html(?:[?#]|$)/.test(href)) {
+      window.gtag('event', 'download_page_click', {
+        placement: placement(a),
+        link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60),
+        detected_os: os,
+        page_path: location.pathname,
+        transport_type: 'beacon'
+      });
+    }
+  });
 })();
