@@ -1,0 +1,21 @@
+# Invoiceo
+
+> Invoiceo is free, offline billing and GST invoice software for Windows, macOS and Linux, made by Madcreations (India). It creates invoices, quotations and payment receipts, prints on A4/A5/A6 paper or 58/80 mm thermal printers, and works in English, Tamil, Hindi, Nepali, French, Spanish, Chinese and Tibetan (partly translated). All business data is stored on the user's own computer. The app is free with no subscription; custom features are a paid service quoted per request.
+
+## Pages
+
+- [Home](https://invoiceo.in/): what Invoiceo does
+- [Download](https://invoiceo.in/download.html): installers for Windows, macOS and Linux, with install steps
+- [Customization](https://invoiceo.in/customization.html): paid custom features, quoted per request
+- [FAQ](https://invoiceo.in/faq.html): price, offline use, data storage, GST, printers, languages
+- [Updates](https://invoiceo.in/changelog.html): release notes
+- [Contact](https://invoiceo.in/contact.html): email madhanprasat2002r@gmail.com
+
+## Key facts
+
+- Price: free, no subscription; paid customization on request
+- Platforms: Windows 10/11 (64-bit), macOS 12 or later, Linux (.deb and AppImage)
+- Works offline; no online account needed
+- GST: GSTIN, HSN/SAC, CGST + SGST or IGST, Tax Invoice / Bill of Supply titles
+- Current version: 1.0.0 (9 October 2026)
+- Based on Invoiso by ANOOP P (MIT License)
