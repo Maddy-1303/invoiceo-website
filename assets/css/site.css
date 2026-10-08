@@ -329,6 +329,19 @@ code {
 .shot figcaption { display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.6; }
 .shot figcaption b { font-size: 18px; line-height: 1.45; }
 .shot-wide { grid-column: span 2; }
+/* Sample printed documents: the page sits on a tray, cropped at the bottom. */
+.paper {
+  position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 12px;
+  background: linear-gradient(180deg, var(--muted-bg) 0%, #e8edf3 100%);
+  border: 1px solid var(--line); box-shadow: var(--shadow-window);
+}
+.paper a { display: block; height: 100%; }
+.paper img {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  background: #fff; box-shadow: 0 2px 4px rgba(15, 23, 42, 0.06), 0 12px 28px rgba(15, 23, 42, 0.14);
+}
+.paper-a4 img { top: 22px; width: 76%; }
+.paper-receipt img { top: 18px; height: calc(100% - 36px); width: auto; max-width: none; }
 @media (max-width: 1100px) { .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 720px) { .shots { grid-template-columns: 1fr; } .shot-wide { grid-column: span 1; } }
 
