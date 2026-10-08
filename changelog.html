@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/css/site.css?v=1.0.0">
+  <link rel="stylesheet" href="assets/css/site.css?v=1.0.1">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -50,8 +50,24 @@
 
 <section class="section">
   <div class="container prose">
+    <article class="release" id="v1.0.1">
+      <h2>Version 1.0.1 <span class="badge badge-brand">Latest</span></h2>
+      <p class="date">9 October 2026</p>
+      <p>Fixes and improvements from release testing.</p>
+      <ul>
+        <li>Stock can be a decimal number, so selling 0.5 kg takes exactly 0.5 from stock.</li>
+        <li>Receipts now count as sales in Reports and on the dashboard.</li>
+        <li>Tamil text prints correctly on payment receipts, customer statements and report PDFs.</li>
+        <li>PDF Settings shows a real sample invoice with your company details as its preview.</li>
+        <li>Every user can change their own password from the user menu.</li>
+        <li>Importing a backup now checks the file first and never replaces your data with an empty or wrong file.</li>
+        <li>Safer billing: a discount cannot make a line negative, quantity 0 is not accepted, and a converted quotation cannot be converted twice.</li>
+        <li>The Windows installer also works on ARM laptops, and the Linux AppImage works on newer Ubuntu versions.</li>
+      </ul>
+    </article>
+
     <article class="release" id="v1.0.0">
-      <h2>Version 1.0.0 <span class="badge badge-brand">Latest</span></h2>
+      <h2>Version 1.0.0</h2>
       <p class="date">9 October 2026</p>
       <p>The first release under the Invoiceo name.</p>
       <ul>
@@ -110,7 +126,7 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/config.js?v=1.0.0"></script>
-<script src="assets/js/site.js?v=1.0.0"></script>
+<script src="assets/js/config.js?v=1.0.1"></script>
+<script src="assets/js/site.js?v=1.0.1"></script>
 </body>
 </html>
