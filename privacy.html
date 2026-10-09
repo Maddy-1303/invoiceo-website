@@ -54,7 +54,8 @@
     <h2>The Invoiceo app</h2>
     <ul>
       <li><b>Your business data stays on your computer.</b> The customers, products, invoices, payments, settings and backups you create are stored on the computer where Invoiceo is installed. We do not receive a copy.</li>
-      <li><b>The app sends nothing to us.</b> It has no usage tracking or analytics and does not send your business data anywhere. Once a day, when you are online, it asks GitHub whether a newer version of Invoiceo exists; that is an ordinary web request, so GitHub sees your IP address. Otherwise it goes online only when you click a link that opens your web browser.</li>
+      <li><b>Anonymous usage counts.</b> So that we know how many people use Invoiceo, the app (from version 1.0.3) sends us a short message when it is first opened, once a day while it is used, and once when the first invoice is created. Each message carries only a random ID made for this purpose, the app version and the operating system (Windows, macOS or Linux). It never includes your customers, products, invoices, amounts or company details. The messages go to a small server we run on Cloudflare, which does not store IP addresses; Cloudflare’s handling is described in the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>. You can turn this off in the app under <b>Settings → Software Info</b>.</li>
+      <li><b>Update check.</b> Once a day, when you are online, the app asks GitHub whether a newer version of Invoiceo exists; that is an ordinary web request, so GitHub sees your IP address. Apart from this and the usage counts, the app goes online only when you click a link that opens your web browser.</li>
       <li><b>No online account.</b> The app’s usernames and passwords exist only on your computer.</li>
       <li><b>No advertising</b> and no selling of data, ever.</li>
       <li><b>Links you choose to open.</b> Some buttons in the app open a web page in your browser (for example this website, our forms or Buy Me a Coffee). What happens on those pages is covered below or by that site’s own policy.</li>
@@ -109,7 +110,7 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/config.js?v=293d112dbc"></script>
+<script src="assets/js/config.js?v=ee4498c6e0"></script>
 <script src="assets/js/site.js?v=c3c3a244ef"></script>
 </body>
 </html>
