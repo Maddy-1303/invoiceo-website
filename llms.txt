@@ -18,5 +18,5 @@
 - Platforms: Windows 10/11 (64-bit), macOS 12 or later, Linux (.deb and AppImage)
 - Works offline; no online account needed
 - GST: GSTIN, HSN/SAC, CGST + SGST or IGST, Tax Invoice / Bill of Supply titles
-- Current version: 1.0.1 (9 October 2026)
+- Current version: 1.0.2 (9 October 2026)
 - Based on Invoiso by ANOOP P (MIT License)
