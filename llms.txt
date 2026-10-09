@@ -5,6 +5,7 @@
 ## Pages
 
 - [Home](https://invoiceo.in/): what Invoiceo does
+- [Home in Tamil](https://invoiceo.in/ta.html): the same page in Tamil (தமிழ்)
 - [Download](https://invoiceo.in/download.html): installers for Windows, macOS and Linux, with install steps
 - [Customization](https://invoiceo.in/customization.html): paid custom features, quoted per request
 - [FAQ](https://invoiceo.in/faq.html): price, open source, offline use, data storage, GST, printers, languages

@@ -3,6 +3,35 @@
 (function () {
   'use strict';
   var C = window.INVOICEO || {};
+  // Words this script writes into the page, in the page's language (ta.html is Tamil).
+  var TA = document.documentElement.lang === 'ta';
+  var T = TA ? {
+    soon: 'விரைவில்',
+    phoneButton: 'கணினியில் டவுன்லோட் செய்ய',
+    downloadFor: function (n) { return n + '-க்கு டவுன்லோட்'; },
+    phoneMeta: 'Invoiceo, Windows, macOS, Linux கணினிகளுக்கான டெஸ்க்டாப் ஆப். இன்ஸ்டால் செய்ய இந்தப் பக்கத்தை உங்கள் கணினியில் திறக்கவும்.',
+    free: 'இலவசம்', version: 'பதிப்பு ', alsoBefore: ' · ', alsoAfter: '-க்கும் உண்டு', and: ' மற்றும் ',
+    started: 'டவுன்லோட் தொடங்கிவிட்டது.', steps: 'முழு வழிமுறைகள்', stepsPage: '', close: 'மூடு',
+    help: {
+      windows: 'டவுன்லோட் முடிந்ததும் ஃபைலைத் திறக்கவும். <b>“Windows protected your PC”</b> என்று வந்தால் <b>More info</b>, பிறகு <b>Run anyway</b> அழுத்தவும்.',
+      mac: 'ஃபைலைத் திறந்து Invoiceo-வை Applications-க்குள் இழுத்து விடவும். முதல் முறை macOS தடுத்தால், <b>System Settings → Privacy &amp; Security</b> திறந்து <b>Open Anyway</b> அழுத்தவும்.',
+      linux_deb: 'டவுன்லோட் ஆன ஃபோல்டரில் <code>sudo apt install ./Invoiceo-Linux.deb</code> இயக்கவும்.',
+      linux_appimage: '<code>chmod +x Invoiceo-Linux.AppImage</code> இயக்கி, பிறகு திறக்கவும்.'
+    }
+  } : {
+    soon: 'Coming soon',
+    phoneButton: 'Get it for your computer',
+    downloadFor: function (n) { return 'Download for ' + n; },
+    phoneMeta: 'Invoiceo is a desktop app for Windows, macOS and Linux. Open this page on your computer to install it.',
+    free: 'Free', version: 'Version ', alsoBefore: ' · Also for ', alsoAfter: '', and: ' and ',
+    started: 'Your download has started.', steps: 'Full install steps', stepsPage: 'download.html', close: 'Close',
+    help: {
+      windows: 'Open the file when it has downloaded. If Windows says <b>“Windows protected your PC”</b>, click <b>More info</b>, then <b>Run anyway</b>.',
+      mac: 'Open the file and drag Invoiceo into Applications. The first time, macOS may block it: open <b>System Settings → Privacy &amp; Security</b> and click <b>Open Anyway</b>.',
+      linux_deb: 'Install it with <code>sudo apt install ./Invoiceo-Linux.deb</code> in the folder you downloaded it to.',
+      linux_appimage: 'Make it runnable with <code>chmod +x Invoiceo-Linux.AppImage</code>, then open it.'
+    }
+  };
 
   // Mobile menu
   var toggle = document.querySelector('.menu-toggle');
@@ -51,7 +80,7 @@
         block.classList.add('hidden');
       } else {
         el.setAttribute('aria-disabled', 'true');
-        el.setAttribute('title', 'Coming soon');
+        el.setAttribute('title', T.soon);
         el.removeAttribute('href');
       }
     }
@@ -114,13 +143,13 @@
     var label = btn.querySelector('[data-os-label]');
     var mark = btn.querySelector('[data-os-icon]');
     if (os === 'mobile') {
-      if (label) label.textContent = 'Get it for your computer';
+      if (label) label.textContent = T.phoneButton;
       return;
     }
     var target = myCard && myCard.querySelector('[data-primary-download]');
     if (!names[os] || !target) return;
     btn.setAttribute('href', target.getAttribute('href'));
-    if (label) label.textContent = 'Download for ' + names[os];
+    if (label) label.textContent = T.downloadFor(names[os]);
     var logo = myCard.querySelector('.tile svg');
     if (mark && logo) { mark.textContent = ''; mark.appendChild(logo.cloneNode(true)); }
   });
@@ -129,16 +158,17 @@
   var meta = document.querySelector('[data-hero-meta]');
   if (meta) {
     if (os === 'mobile') {
-      meta.textContent = 'Invoiceo is a desktop app for Windows, macOS and Linux. Open this page on your computer to install it.';
+      meta.textContent = T.phoneMeta;
     } else if (names[os] && myCard) {
       var size = value('sizes.' + sizeKey[os]);
-      var others = Object.keys(names).filter(function (k) { return k !== os; }).map(function (k) { return names[k]; }).join(' and ');
-      meta.textContent = ['Free', 'Version ' + (C.version || ''), size, myCard.getAttribute('data-req-short')]
-        .filter(Boolean).join(' · ') + ' · Also for ';
+      var others = Object.keys(names).filter(function (k) { return k !== os; }).map(function (k) { return names[k]; }).join(T.and);
+      meta.textContent = [T.free, T.version + (C.version || ''), size, myCard.getAttribute('data-req-short')]
+        .filter(Boolean).join(' · ') + T.alsoBefore;
       var more = document.createElement('a');
       more.href = '#download';
       more.textContent = others;
       meta.appendChild(more);
+      if (T.alsoAfter) meta.appendChild(document.createTextNode(T.alsoAfter));
     }
   }
 
@@ -153,11 +183,12 @@
       : /\.appimage$/i.test(file) ? 'linux_appimage' : null;
     return platform ? { file: file, platform: platform } : null;
   }
+  // [help text, anchor of the install steps]. The Tamil page has the steps on itself.
   var HELP = {
-    windows: ['Open the file when it has downloaded. If Windows says <b>“Windows protected your PC”</b>, click <b>More info</b>, then <b>Run anyway</b>.', 'windows'],
-    mac: ['Open the file and drag Invoiceo into Applications. The first time, macOS may block it: open <b>System Settings → Privacy &amp; Security</b> and click <b>Open Anyway</b>.', 'macos'],
-    linux_deb: ['Install it with <code>sudo apt install ./Invoiceo-Linux.deb</code> in the folder you downloaded it to.', 'linux'],
-    linux_appimage: ['Make it runnable with <code>chmod +x Invoiceo-Linux.AppImage</code>, then open it.', 'linux']
+    windows: [T.help.windows, 'windows'],
+    mac: [T.help.mac, 'macos'],
+    linux_deb: [T.help.linux_deb, 'linux'],
+    linux_appimage: [T.help.linux_appimage, 'linux']
   };
   var toast = null;
   function showHelp(platform) {
@@ -170,8 +201,8 @@
       document.body.appendChild(toast);
     }
     toast.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>'
-      + '<div><b>Your download has started.</b> ' + help[0] + ' <a href="download.html#' + help[1] + '">Full install steps</a></div>'
-      + '<button type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>';
+      + '<div><b>' + T.started + '</b> ' + help[0] + ' <a href="' + T.stepsPage + '#' + help[1] + '">' + T.steps + '</a></div>'
+      + '<button type="button" aria-label="' + T.close + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>';
     toast.querySelector('button').addEventListener('click', function () { toast.remove(); toast = null; });
   }
 
