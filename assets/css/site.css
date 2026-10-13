@@ -510,3 +510,35 @@ html[lang="ta"] h3, html[lang="ta"] .h3, html[lang="ta"] .h4 { line-height: 1.5;
 html[lang="ta"] .lead { line-height: 1.75; }
 html[lang="ta"] .eyebrow, html[lang="ta"] .receipt-title { text-transform: none; letter-spacing: 0.02em; }
 html[lang="ta"] .cta-band h2 { line-height: 1.4; letter-spacing: 0; }
+
+/* ── Testimonials and recent work ───────────────────────────────────────── */
+.testimonials { max-width: 760px; margin-left: auto; margin-right: auto; }
+.testimonial {
+  margin: 0; padding: 32px; border-radius: 20px; background: #fff; border: 1px solid var(--line);
+  box-shadow: var(--shadow-card); display: flex; flex-direction: column; gap: 20px; align-items: flex-start;
+}
+.testimonial blockquote { margin: 0; position: relative; padding-left: 40px; }
+.testimonial blockquote::before {
+  content: "“"; position: absolute; left: 0; top: -14px;
+  font-size: 64px; line-height: 1; font-weight: 800; color: var(--brand);
+}
+.testimonial blockquote p { font-size: clamp(17px, 1.4vw, 19px); line-height: 1.7; color: var(--ink); font-weight: 600; }
+.testimonial-note { margin-top: -12px; padding-left: 40px; color: var(--muted); font-size: 13px; }
+.testimonial figcaption { display: flex; align-items: center; gap: 14px; }
+.testimonial figcaption > span:last-child { display: flex; flex-direction: column; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.testimonial figcaption b { font-size: 16px; color: var(--ink); }
+.testimonial-mark {
+  flex: none; width: 44px; height: 44px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--teal-tint); color: var(--teal-dark); font-weight: 800; font-size: 18px;
+}
+html[lang="ta"] .testimonial blockquote p { font-size: clamp(16px, 1.3vw, 18px); font-weight: 500; line-height: 1.8; }
+@media (max-width: 480px) {
+  .testimonial { padding: 24px 20px; }
+  /* Phones: the quote mark sits above the words, so they get the full width. */
+  .testimonial blockquote { padding-left: 0; }
+  .testimonial blockquote::before { position: static; display: block; height: 30px; font-size: 56px; }
+  .testimonial-note { padding-left: 0; }
+}
+.doc-full { margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.doc-full img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); box-shadow: var(--shadow-window); background: #fff; }
+.doc-full figcaption { color: var(--muted); font-size: 13.5px; text-align: center; }
