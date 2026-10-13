@@ -7,7 +7,10 @@
   var TA = document.documentElement.lang === 'ta';
   var T = TA ? {
     soon: 'விரைவில்',
-    phoneButton: 'கணினியில் டவுன்லோட் செய்ய',
+    phoneButton: 'லிங்கை கணினிக்கு அனுப்பு',
+    sendText: 'Invoiceo — இலவச பில்லிங் சாஃப்ட்வேர். கணினியில் திறந்து டவுன்லோட் செய்யுங்கள்:',
+    sendUrl: 'https://invoiceo.in/ta.html#download',
+    copied: 'லிங்க் காப்பி ஆனது', copyPrompt: 'இந்த லிங்கை காப்பி செய்யுங்கள்:',
     downloadFor: function (n) { return n + '-க்கு டவுன்லோட்'; },
     phoneMeta: 'Invoiceo, Windows, macOS, Linux கணினிகளுக்கான டெஸ்க்டாப் ஆப். இன்ஸ்டால் செய்ய இந்தப் பக்கத்தை உங்கள் கணினியில் திறக்கவும்.',
     free: 'இலவசம்', version: 'பதிப்பு ', alsoBefore: ' · ', alsoAfter: '-க்கும் உண்டு', and: ' மற்றும் ',
@@ -20,7 +23,10 @@
     }
   } : {
     soon: 'Coming soon',
-    phoneButton: 'Get it for your computer',
+    phoneButton: 'Send the link to my computer',
+    sendText: 'Invoiceo, free billing software for your computer. Open this on your computer to download it:',
+    sendUrl: 'https://invoiceo.in/download.html',
+    copied: 'Link copied', copyPrompt: 'Copy this link:',
     downloadFor: function (n) { return 'Download for ' + n; },
     phoneMeta: 'Invoiceo is a desktop app for Windows, macOS and Linux. Open this page on your computer to install it.',
     free: 'Free', version: 'Version ', alsoBefore: ' · Also for ', alsoAfter: '', and: ' and ',
@@ -138,12 +144,58 @@
     card.classList.toggle('is-recommended', card === myCard && !!names[os]);
   });
 
+  // Phones: Invoiceo installs on a computer, so a phone visitor sends the
+  // download link to themselves (share menu, WhatsApp or copy) and opens it
+  // there later. Counted as send_link (method: share / whatsapp / copy).
+  function trackSend(method) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'send_link', { method: method, page_path: location.pathname, transport_type: 'beacon' });
+    }
+  }
+  var canShare = typeof navigator.share === 'function';
+  function shareLink() {
+    navigator.share({ title: 'Invoiceo', text: T.sendText, url: T.sendUrl })
+      .then(function () { trackSend('share'); }, function () {});
+  }
+  document.querySelectorAll('[data-send-share]').forEach(function (b) {
+    if (!canShare) return;
+    b.classList.remove('hidden');
+    b.addEventListener('click', shareLink);
+  });
+  document.querySelectorAll('[data-send-whatsapp]').forEach(function (a) {
+    // No number: WhatsApp asks who to send it to ("Message yourself" works).
+    a.setAttribute('href', 'https://wa.me/?text=' + encodeURIComponent(T.sendText + ' ' + T.sendUrl));
+    a.addEventListener('click', function () { trackSend('whatsapp'); });
+  });
+  document.querySelectorAll('[data-send-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var label = b.querySelector('span');
+      var done = function () {
+        var old = label.textContent;
+        label.textContent = T.copied;
+        setTimeout(function () { label.textContent = old; }, 2000);
+        trackSend('copy');
+      };
+      var manual = function () { window.prompt(T.copyPrompt, T.sendUrl); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(T.sendUrl).then(done, manual);
+      } else {
+        manual();
+      }
+    });
+  });
+
   // Hero button: the installer for this computer, or the download section.
   document.querySelectorAll('[data-os-download]').forEach(function (btn) {
     var label = btn.querySelector('[data-os-label]');
     var mark = btn.querySelector('[data-os-icon]');
     if (os === 'mobile') {
+      // Opens the share menu; without one it goes to the download section,
+      // where the WhatsApp and Copy link buttons are.
       if (label) label.textContent = T.phoneButton;
+      if (canShare) {
+        btn.addEventListener('click', function (e) { e.preventDefault(); shareLink(); });
+      }
       return;
     }
     var target = myCard && myCard.querySelector('[data-primary-download]');
