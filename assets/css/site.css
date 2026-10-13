@@ -542,3 +542,5 @@ html[lang="ta"] .testimonial blockquote p { font-size: clamp(16px, 1.3vw, 18px);
 .doc-full { margin: 0; display: flex; flex-direction: column; gap: 12px; }
 .doc-full img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); box-shadow: var(--shadow-window); background: #fff; }
 .doc-full figcaption { color: var(--muted); font-size: 13.5px; text-align: center; }
+.testimonial figcaption b a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+.testimonial figcaption b a:hover { color: var(--brand); text-decoration-color: currentColor; }
